@@ -2,6 +2,8 @@ package newsstats;
 
 import java.util.ArrayList;
 
+// This is the class that executes NewsByJsoup and NewsAnalyzer in order to fetch and analyze the content
+
 public class AnalyzeNews {
 
     public static void main(String[] argv) {
