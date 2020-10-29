@@ -15,7 +15,8 @@ public class NewsAnalyzer {
     public void countWords() {
         List<String> iwList = Arrays.asList(IGNORED_WORDS);
 
-        _newsList.forEach(newsstr -> {
+        for (int n = 0; n < _newsList.size(); n++) {
+            newsstr = _newsList.get(n);
             String[] words = newsstr.split(" ");
             for (int i = 0; i < words.length; i++) {
                 String word = words[i];
@@ -29,7 +30,7 @@ public class NewsAnalyzer {
                     }
                 }
             }
-        });
+        }
 
     }
 
