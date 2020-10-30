@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class NewsAnalyzer {
-    public static final String[] IGNORED_WORDS = {"at", "in", "to", "the", "of", "on", "after", "as", "a"};
+    public static final String[] IGNORED_WORDS = {"at", "in", "to", "the", "and", "an", "into", "for", "of", "on", "after", "as", "a"};
     private HashMap<String, WordCount> _wcMap = new HashMap<String, WordCount>();
     private ArrayList<String> _newsList = null;
 
