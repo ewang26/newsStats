@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class NewsAnalyzer {
+
     private HashMap<String, WordCount> _wcMap = new HashMap<String, WordCount>();
     private ArrayList<String> _newsList = null;
 
