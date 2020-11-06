@@ -2,7 +2,7 @@ package newsstats;
 
 import java.util.ArrayList;
 
-public class AnalyzeNews {
+public class AnalyzeNewsMain {
 
     public static void main(String[] argv) {
         ArrayList<String> newsList = new ArrayList<>();
