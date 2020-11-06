@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class NewsAnalyzer {
-    public static final String[] IGNORED_WORDS = {"at", "in", "to", "the", "of", "on", "after", "as", "a"};
+
     private HashMap<String, WordCount> _wcMap = new HashMap<String, WordCount>();
     private ArrayList<String> _newsList = null;
 
@@ -13,9 +13,10 @@ public class NewsAnalyzer {
     }
 
     public void countWords() {
-        List<String> iwList = Arrays.asList(IGNORED_WORDS);
+        List<String> iwList = getIgnoredWords();
 
-        _newsList.forEach(newsstr -> {
+        for (int n = 0; n < _newsList.size(); n++) {
+            newsstr = _newsList.get(n);
             String[] words = newsstr.split(" ");
             for (int i = 0; i < words.length; i++) {
                 String word = words[i];
@@ -29,8 +30,27 @@ public class NewsAnalyzer {
                     }
                 }
             }
-        });
+        }
 
+    }
+
+    public static List<String> getIgnoredWords(){
+        List<String> result = new ArrayList<String>();
+
+        try {
+            BufferedReader in = new BufferedReader(new FileReader("FILLERWORDS.txt"));
+            String line;
+            while((line = in.readLine()) != null){
+                line = line.trim();
+                if(line.isEmpty() || (line.length()>2 && line.substring(0, 2).equals("//")))
+                    continue;
+                result.add(line);
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return result;
     }
 
     public void sortWords() {

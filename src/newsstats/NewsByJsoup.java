@@ -7,6 +7,8 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 
+// this class uses jsoup instead of the Java dom parser
+
 public class NewsByJsoup {
     public static ArrayList<String> addNewsToList(String theUrl, String tag) {
         ArrayList<String> newsList = new ArrayList<String>();
