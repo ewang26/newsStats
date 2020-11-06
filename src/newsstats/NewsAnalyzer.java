@@ -1,5 +1,7 @@
 package newsstats;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -16,7 +18,7 @@ public class NewsAnalyzer {
         List<String> iwList = getIgnoredWords();
 
         for (int n = 0; n < _newsList.size(); n++) {
-            newsstr = _newsList.get(n);
+            String newsstr = _newsList.get(n);
             String[] words = newsstr.split(" ");
             for (int i = 0; i < words.length; i++) {
                 String word = words[i];

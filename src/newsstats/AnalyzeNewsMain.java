@@ -3,10 +3,8 @@ package newsstats;
 import java.util.ArrayList;
 
 public class AnalyzeNewsMain {
-=======
-// This is the class that executes NewsByJsoup and NewsAnalyzer in order to fetch and analyze the content
 
-public class AnalyzeNews {
+// This is the class that executes NewsByJsoup and NewsAnalyzer in order to fetch and analyze the content
 
     public static void main(String[] argv) {
         ArrayList<String> newsList = new ArrayList<>();
