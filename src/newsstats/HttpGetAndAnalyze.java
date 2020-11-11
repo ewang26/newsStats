@@ -14,6 +14,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.LinkedList;
 
+/**
+ * This method extracts xml files of online websites, and then stores the data into a doc file.
+ * By searching for tags with "titles", it creates a nodelist of titles.
+ * Then, the text contents of each of the titles is put into the newList. 
+ * 
+ *@param url of the websites
+ *@return the headers of the titles and also the websites where they come from
+ *@author eric wang
+ */
 public class HttpGetAndAnalyze {
     public static void main(String[] argv) {
         try {
