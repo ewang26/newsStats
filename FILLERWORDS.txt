@@ -72,6 +72,34 @@ with
 within
 without
 
+//More prepositions: https://www.english-grammar-revolution.com/list-of-prepositions.html
+amidst
+as far as
+aside
+athwart
+atop
+barring
+by means of
+circa
+far from
+in accordance with
+in case of
+in front of
+in lieu of
+in place of
+including
+next to
+notwithstanding
+on account of
+on behalf of
+on top of
+out
+out of
+prior to
+regardless of
+throughout
+with regard to
+
 //Conjunctions: https://eslforums.com/list-of-conjunctions/
 A minute later
 Accordingly
