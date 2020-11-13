@@ -59,6 +59,8 @@ public class WordCount implements Comparable<WordCount>{
     }
 
     public int compareTo(WordCount wc) {
+        //Sorts by increasing (non-decreasing) order of "_count"
+        //Name is not a factor
         if (this._count > wc.getCount()) {
             return 1;
         }
@@ -73,5 +75,6 @@ public class WordCount implements Comparable<WordCount>{
     public String toString() {
         return String.format("Word:%s count %d", _word, _count);
     }
+
 
 }

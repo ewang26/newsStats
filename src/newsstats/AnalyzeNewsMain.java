@@ -1,6 +1,7 @@
 package newsstats;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The AnalyzeNewsMain program implements an application that retrieves content from online news articles
@@ -21,5 +22,10 @@ public class AnalyzeNewsMain {
         NewsAnalyzer analyzer = new NewsAnalyzer(newsList);
         analyzer.countWords();
         analyzer.sortWords();
+
+        //Printing top terms
+        //Issue: https://github.com/ewang26/newsStats/issues/13
+        analyzer.printTopTerms();
+        List<WordCount> topList = analyzer.getTopTerms();
     }
 }

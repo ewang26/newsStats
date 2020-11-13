@@ -86,6 +86,35 @@ public class NewsAnalyzer {
         wcList.forEach(wc -> System.out.println(wc));
     }
 
+
+    /**
+     * Prints the top 20 terms of the article by number of appearances. If there are less than 20 words in the article,
+     * the method will print all of the words available.
+     */
+    public void printTopTerms(){
+        List<WordCount> topList = getTopTerms();
+        for(WordCount i : topList){
+            System.out.println(i.getWord() + ": " + i.getCount());
+        }
+    }
+
+    /**
+     * Finds and returns the top 20 terms of the article by number of appearances. If there are less than 20 words in the article,
+     * the method will return all of the words available.
+     * @return List of WordCount for the top 20 or less terms of the article by number of appearances
+     */
+    public List<WordCount> getTopTerms(){
+        List<WordCount> wcList = _wcMap.values().stream().collect(Collectors.toList());
+        Collections.sort(wcList);
+        Collections.reverse(wcList);
+
+        List<WordCount> result = new ArrayList<WordCount>();
+        for(int i = 0; i<Math.min(20, wcList.size()); ++i){
+            result.add(wcList.get(i));
+        }
+        return result;
+    }
+
     /**
      * Retrieves the text of the represented news article
      * @return An ArrayList of strings storing text
