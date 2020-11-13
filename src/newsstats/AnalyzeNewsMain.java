@@ -2,8 +2,12 @@ package newsstats;
 
 import java.util.ArrayList;
 
+/**
+ * The AnalyzeNewsMain program implements an application that retrieves content from online news articles
+ * and analyzes them based on the frequency of key words.
+ * @author ewang26
+ */
 public class AnalyzeNewsMain {
-
 // This is the class that executes NewsByJsoup and NewsAnalyzer in order to fetch and analyze the content
 
     public static void main(String[] argv) {
