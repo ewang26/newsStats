@@ -25,9 +25,21 @@ public class NewsStatTest extends TestCase {
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            }
         }
+
     }
 
 
+    // this is the test to see if jsoup is parsing the sample text correctly
+    public void testTitleNumbers() {
+        assertTrue(_doc.select("h3").size() == 6);
+    }
+
+    public void testCount() {
+        ArrayList<String> newsList = new ArrayList<String>();
+        Elements eleList = _doc.select("h3");
+    }
 }
+
+
+
