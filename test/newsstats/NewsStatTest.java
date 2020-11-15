@@ -39,7 +39,7 @@ public class NewsStatTest extends TestCase {
 
         NewsAnalyzer na = new NewsAnalyzer(_newsList);
         na.countWords();
-        System.out.println(na.getWcMap().size());
+        // System.out.println(na.getWcMap().size());
 
         assertEquals(na.getWcMap().size(), 56);
     }
@@ -48,7 +48,7 @@ public class NewsStatTest extends TestCase {
         NewsAnalyzer na = new NewsAnalyzer(_newsList);
         na.countWords();
         List<WordCount> wordList = na.sortWords();
-        assertEquals(words.get(0)).getWord(), "called");
+        assertEquals(wordList.get(0)).getWord(), "called");
     }
 }
 
