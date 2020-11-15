@@ -80,10 +80,11 @@ public class NewsAnalyzer {
     /**
      * Sorts then prints the tracked words of an article in non-decreasing order by their frequency.
      */
-    public void sortWords() {
+    public List<WordCount> sortWords() {
         List<WordCount> wcList = _wcMap.values().stream().collect(Collectors.toList());
         Collections.sort(wcList);
         wcList.forEach(wc -> System.out.println(wc));
+        return wcList;
     }
 
     public HashMap<String, WordCount> getWcMap() {

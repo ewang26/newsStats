@@ -1,6 +1,25 @@
 //Commented lines and empty lines are ignored
 
 //Common Prepositions: https://www.englishclub.com/vocabulary/prepositions-list.htm
+the
+should
+not
+are
+is
+It's
+I'm
+have
+new
+Here's
+high
+a
+be
+how
+will
+can
+can
+only
+could
 aboard
 about
 above
