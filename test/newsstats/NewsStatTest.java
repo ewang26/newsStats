@@ -37,7 +37,7 @@ public class NewsStatTest extends TestCase {
         ArrayList<String> newsList = new ArrayList<String>();
         Elements eleList = _doc.select("h3");
 
-        NewsAnalyzer na = NewsAnalyzer(_newsList);
+        NewsAnalyzer na = new NewsAnalyzer(_newsList);
         na.countWords();
         System.out.println(na.getWcMap().size());
 

@@ -29,7 +29,7 @@ public class NewsAnalyzer {
     }
 
     /**
-     * Counts the frequency of important words in a news article.
+     * Counts the frequency of important words in a news title.
      * Ignores a predefined list of "filler" words, including prepositions, conjunctions, and pronouns.
      */
     public void countWords() {
@@ -84,6 +84,14 @@ public class NewsAnalyzer {
         List<WordCount> wcList = _wcMap.values().stream().collect(Collectors.toList());
         Collections.sort(wcList);
         wcList.forEach(wc -> System.out.println(wc));
+    }
+
+    public HashMap<String, WordCount> getWcMap() {
+        return _wcMap;
+    }
+
+    public void setWcMap(HashMap<String, WordCount> _wcMap) {
+        this._wcMap = _wcMap;
     }
 
     /**
