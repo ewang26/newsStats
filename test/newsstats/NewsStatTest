@@ -26,9 +26,7 @@ public class NewsStatTest extends TestCase {
         catch (Exception ex) {
             ex.printStackTrace();
         }
-
     }
-
 
     // this is the test to see if jsoup is parsing the sample text correctly
     public void testTitleNumbers() {
@@ -38,6 +36,19 @@ public class NewsStatTest extends TestCase {
     public void testCount() {
         ArrayList<String> newsList = new ArrayList<String>();
         Elements eleList = _doc.select("h3");
+
+        NewsAnalyzer na = NewsAnalyzer(_newsList);
+        na.countWords();
+        System.out.println(na.getWcMap().size());
+
+        assertEquals(na.getWcMap().size(), 56);
+    }
+
+    public void testSort() {
+        NewsAnalyzer na = new NewsAnalyzer(_newsList);
+        na.countWords();
+        List<WordCount> wordList = na.sortWords();
+        assertEquals(words.get(0)).getWord(), "called");
     }
 }
 
