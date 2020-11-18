@@ -1,0 +1,66 @@
+import java.awt.event.WindowFocusListener
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'java-library'
+    id 'maven-publish'
+    id "com.adarshr.test-logger" version "2.1.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.jsoup:jsoup:1.13.1'
+    compile 'junit:junit:4.12'
+}
+
+ext {
+    javaMainClass = "newsstats.AnalyzeNewsMain"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+test {
+    useJUnit()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'csc630.newsStats'
+            artifactId = 'newsStatsWithGradle'
+            version = '1.0.1'
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/ewang26/newsStats"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
