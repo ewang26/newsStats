@@ -1,2 +1,0 @@
-newsstats/NewsStatTest.java
- test.newsstats.NewsStatTest

@@ -46,7 +46,7 @@ test {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'newsStats'
+            groupId = 'csc630.newsStats'
             artifactId = 'newsStatsWithGradle'
             version = '1.0.1'
             from components.java
