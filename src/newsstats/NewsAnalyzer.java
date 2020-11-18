@@ -87,6 +87,37 @@ public class NewsAnalyzer {
         return wcList;
     }
 
+
+    /**
+     * Prints the top 10 terms of the article by number of appearances. If there are less than 10 words in the article,
+     * the method will print all of the words available.
+     */
+    public void printTopTerms(){
+        List<WordCount> topList = getTopTerms();
+        for(WordCount i : topList){
+            System.out.println(i.getWord() + ": " + i.getCount());
+        }
+    }
+
+    /**
+     * Finds and returns the top 10 terms of the article by number of appearances. If there are less than 10 words in the article,
+     * the method will return all of the words available.
+     * @return List of WordCount for the top 10 or less terms of the article by number of appearances
+     */
+    public List<WordCount> getTopTerms(){
+        List<WordCount> wcList = _wcMap.values().stream().collect(Collectors.toList());
+        Collections.sort(wcList);
+        Collections.reverse(wcList);
+
+        List<WordCount> result = new ArrayList<WordCount>();
+        for(int i = 0; i<Math.min(10, wcList.size()); ++i){
+            result.add(wcList.get(i));
+        }
+        return result;
+    }
+
+
+
     public HashMap<String, WordCount> getWcMap() {
         return _wcMap;
     }
