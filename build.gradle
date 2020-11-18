@@ -47,7 +47,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'csc630'
-            artifactId = 'newsStatsWithGradle'
+            artifactId = 'newsstatswithgradle'
             version = '1.0.1'
             from components.java
         }
