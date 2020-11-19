@@ -9,6 +9,7 @@ NewsStats stores all of the H3 and H4 HTML tags (which are the news article head
 
 ## New Feature
 I’m currently working on a new feature that returns only the top-10 most frequent words. This feature is in development and is stored in another branch called `top10-ranking`.
+Please feel free to make any pull requests for this particular feature!
 
 ## Dependencies
 NewStats uses [`jsoup`](https://jsoup.org/), a Java library designed to parse, extract, and manipulate information stored in HTML documents. 
