@@ -8,7 +8,7 @@ Like other standard websites, most online news aggregator services display all o
 NewsStats stores all of the H3 and H4 HTML tags (which are the news article headers) in a list, which is then split into individual words. However, if the strings contain a word that is part of the predefined list of filler words, it will just ignore that specific word and store the rest of the string's words as well as their corresponding frequency throughout the news webpage (article titles only) in a hashmap. The word and its corresponding frequency is stored as a 'WordCount' object. Ultimately, running 'AnalyzeNewsMain.java' will return the top twenty most popular words and their frequency.
 
 ## Dependencies
-NewStats uses `jsoup`, a Java library designed to parse, extract, and manipulate information stored in HTML documents. 
+NewStats uses [`jsoup`](https://jsoup.org/), a Java library designed to parse, extract, and manipulate information stored in HTML documents. 
  
 ## Contributing
 Please see [CONTRIBUTING.md](https://github.com/ewang26/newsStats/blob/gradle-packaged/CONTRIBUTING.md) or the [Issues tab](https://github.com/ewang26/newsStats/issues) on this repository.
